@@ -11,8 +11,10 @@ const Popular = () => (
         <div className="container has-text-centered is-9">
           <h1 className="title">Choose between one of our most popular questions...</h1>
           <br />
-          <div className="columns">
-            {_.map(questions, (question, i) => <Question key={i} question={question} />)}
+          <div className="columns is-multiline">
+            
+              {_.map(questions, (question, i) => <Question key={i} question={question} />)}
+            
           </div>
         </div>
       </div>

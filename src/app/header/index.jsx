@@ -1,5 +1,4 @@
 import React from 'react'
-// import '../assets/scss/main.scss'
 
 const Header = () => (
   <section className="hero is-dark">

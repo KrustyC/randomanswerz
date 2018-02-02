@@ -1,15 +1,32 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import Header from './header'
 import Popular from './popular'
-// import '../assets/scss/main.scss'
+import Form from './form'
+import Modal from './modal'
 
-const App = () => (
-  <div>
-    <Header />
-    <Popular />
+export default class App extends Component{
+  constructor(props) {
+    super(props)
 
-  </div>
-)
+    this.state = {
+      question: null
+    }
+  }
 
-export default App
+  render () {
+    const { question } = this.state
+    console.log(question)
+    return (
+      <div>
+        <Header />
+        <Popular />
+        <Form onClick={q => this.setState({ question: q })}/>
+        <Modal
+          question={question}
+        />
+      </div>
+    )
+  }
+}
+

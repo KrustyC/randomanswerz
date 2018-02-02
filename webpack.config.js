@@ -39,12 +39,12 @@ module.exports = {
     loaders: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        // include: __dirname + '/src',
-        include: path.join(__dirname, '/src'),
         loader: 'babel-loader',
+        exclude: /node_modules/,
+        include: __dirname + '/src',
         query: {
-            presets: ['react','es2015']
+            presets: ['stage-1', 'es2015', 'react'],
+            plugins: ['transform-class-properties']
         }
       },
       {
