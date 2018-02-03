@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
-import Header from './header'
-import Popular from './popular'
-import Form from './form'
+import Main from './main'
 import Modal from './modal'
 
 export default class App extends Component{
@@ -16,15 +14,14 @@ export default class App extends Component{
 
   render () {
     const { question } = this.state
-    console.log(question)
+    const isModalActive = !_.isNull(question) || !_.isEmpty(question)
+
     return (
       <div>
-        <Header />
-        <Popular />
-        <Form onClick={q => this.setState({ question: q })}/>
-        <Modal
-          question={question}
-        />
+        <Main onClick={q => this.setState({ question: q })} />
+        { isModalActive && (
+          <Modal question={question} onClose={() => this.setState({ question: null })}/>
+        )}
       </div>
     )
   }

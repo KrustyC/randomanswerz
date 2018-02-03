@@ -19,9 +19,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
     app: [
-      './assets/lib/fontawesome/solid.min.js',
-      './assets/lib/fontawesome/brands.min.js',
-      './assets/lib/fontawesome/fontawesome.min.js',
+      './assets/lib/fontawesome/css/fontawesome-all.min.css',
       './index.js'
     ]
   },

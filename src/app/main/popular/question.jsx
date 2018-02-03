@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Question = ({ question }) => (
+const Question = ({ question, onUse }) => (
   <div className="column is-4">
-    <div className="card" key={question.id}>
+    <div className="card">
       <div className="card-content">
           <p className="title">"{question.text}"</p>
       </div>
       <footer className="card-footer">
         <div className="card-footer-item">
-          <button className="button is-info">Use</button>
+          <button className="button is-info" onClick={() => onUse(question.text)}>Use</button>
         </div>
       </footer>
     </div>
@@ -17,7 +17,8 @@ const Question = ({ question }) => (
 )
 
 Question.propTypes = {
-  question: PropTypes.object.isRequired
+  question: PropTypes.object.isRequired,
+  onUse: PropTypes.func.isRequired
 }
 
 export default Question
