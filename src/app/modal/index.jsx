@@ -59,11 +59,8 @@ export default class Modal extends Component {
             </div>
           </section>
           <footer className="modal-card-foot">
-            <button
-              className="button is-success"
-              onClick={() => this.props.onClose()}
-            >
-              Thank you! I've done
+            <button className="button is-primary" onClick={() => this.props.onClose()}>
+              Close
             </button>
           </footer>
         </div>

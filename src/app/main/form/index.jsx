@@ -15,7 +15,7 @@ export default class Form extends Component {
     const { question } = this.state
 
     return (
-      <section className="hero is-dark">
+      <section className="hero is-primary is-medium">
         <div className="hero-body">
           <div className="container has-text-centered">
             <h1 className="title">Ask your own question</h1>
