@@ -8,7 +8,7 @@ const Header = () => (
         <h1 className="title">Randomanswerz</h1>
         
         <h2 className="subtitle" style={{ marginTop: '20px' }}>
-          Do you have any important decisions that you can't take? Randomanswerz will take them for you!
+          Do you have any important decisions that you can't make? Randomanswerz will do it for you!
         </h2>
       </div>
     </div>
